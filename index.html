@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="SwallowGuard AI is a student-led project developing an early-stage prototype to study swallowing-related sensor patterns.">
+<title>SwallowGuard AI | Smarter Swallow Monitoring</title>
+<style>
+:root{--navy:#092b50;--deep:#061a31;--teal:#16c8bd;--blue:#46b7ef;--ink:#16385e;--muted:#58718f;--pale:#eaf8f8;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+a{color:inherit} .wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid #e4eef5}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850;font-size:1.25rem;line-height:1.1;color:var(--navy)}
+.logo{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(140deg,var(--teal),#d8ffff);color:var(--navy);font-weight:900}
+.brand small{display:block;font-size:.68rem;font-weight:500;color:var(--muted);letter-spacing:.04em;margin-top:5px}
+nav{display:flex;gap:20px;flex-wrap:wrap}nav a{text-decoration:none;font-size:.84rem;font-weight:650;color:#234968}nav a:hover{color:#009e9b}
+.hero{background:radial-gradient(ellipse at 75% 30%,#174d78 0,transparent 42%),linear-gradient(120deg,var(--deep),#0b345c);color:white;padding:78px 0 86px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:38px}
+.eyebrow{display:inline-block;border:1px solid #168f9d;background:#0b4a68;border-radius:30px;padding:6px 12px;font-size:.75rem;font-weight:750;letter-spacing:.06em;text-transform:uppercase}
+h1{font-size:clamp(2.5rem,5vw,4.4rem);line-height:1.04;letter-spacing:-.045em;margin:22px 0}
+.gradient{background:linear-gradient(90deg,#4ac9ff,#25e2cb);background-clip:text;color:transparent}
+.lead{font-size:1.08rem;max-width:640px;color:#e0edf7}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:800;font-size:.92rem;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,#23dfcc,#54caff);color:#052747}.btn-outline{border-color:#64d9f2;color:white}.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.hero-card{border:1px solid #2698c8;border-radius:22px;padding:22px;background:#082846b8;box-shadow:0 25px 70px #00101d66}
+.signal{border:1px solid #245778;border-radius:12px;padding:13px;margin:10px 0;background:#0b3458}.signal b{display:block;font-size:.83rem}.wave{height:35px;display:flex;align-items:center;gap:3px;margin-top:7px}.wave i{display:block;width:3px;border-radius:4px;background:var(--blue);height:var(--h)}.signal:nth-child(3) .wave i{background:#20ddc5}.signal:nth-child(4) .wave i{background:#b5a1ff}
+section{padding:74px 0;scroll-margin-top:90px}.section-head{max-width:720px;margin-bottom:28px}.kicker{font-size:.75rem;color:#009c9a;font-weight:850;text-transform:uppercase;letter-spacing:.13em}h2{font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.15;margin:7px 0 14px;color:var(--navy);letter-spacing:-.025em}h3{margin:0 0 8px;color:var(--navy)}p{margin:0 0 14px}.muted{color:var(--muted)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:24px;border:1px solid #dfedf2;border-radius:18px;background:#fff;box-shadow:0 8px 28px #0c3b5b08}.card p{font-size:.94rem;color:var(--muted);margin-bottom:0}.icon{width:48px;height:48px;display:grid;place-items:center;background:#dff8f6;border-radius:15px;font-size:1.4rem;margin-bottom:14px}
+.pale{background:linear-gradient(120deg,#f3fbfb,#f6faff)}.sensor-list{display:grid;gap:12px}.sensor{display:flex;gap:14px;padding:16px;background:white;border:1px solid #deedf1;border-radius:14px}.sensor .icon{flex:0 0 46px;margin:0}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.flow-item{text-align:center;position:relative;padding:20px 12px}.flow-item .icon{margin:0 auto 14px;border-radius:50%;width:62px;height:62px}.flow-item:not(:last-child):after{content:"→";position:absolute;right:-12px;top:32px;color:#45a9d7;font-size:1.5rem}
+.roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.phase{padding:22px;border-radius:16px;border:1px solid #dbeaf1}.phase.current{background:#effbfa;border-color:#8edfd8}.phase-num{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--navy);color:white;font-weight:850;margin-bottom:14px}.phase ul{padding-left:18px;color:var(--muted);font-size:.92rem}
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.person{text-align:center;border:1px solid #e1edf2;border-radius:16px;padding:20px 12px}.avatar{width:62px;height:62px;margin:0 auto 12px;border-radius:50%;background:linear-gradient(145deg,#d8f8f4,#dfeafa);display:grid;place-items:center;font-size:1.6rem}
+.cta{background:linear-gradient(120deg,#082343,#0c3b60);color:white;border-radius:24px;padding:36px;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta h2{color:white}.cta p{color:#d4e5f2;max-width:600px}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px}.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}label{font-size:.85rem;font-weight:750}input,textarea{width:100%;border:1px solid #cadce8;border-radius:10px;padding:12px 13px;font:inherit;color:var(--ink);background:white}textarea{min-height:130px;resize:vertical}input:focus,textarea:focus{outline:2px solid #6ddbd3;border-color:#16bdb4}.form-note{font-size:.8rem;color:var(--muted);grid-column:1/-1}
+footer{background:#061b33;color:#dceaf6;padding:30px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-note{font-size:.8rem;color:#adc4d8;max-width:560px}
+.notice{margin-top:18px;padding:14px 16px;border-left:4px solid #e2b74b;background:#fff8e6;color:#654f1a;border-radius:8px;font-size:.88rem}
+@media(max-width:800px){.nav{align-items:flex-start;padding:14px 0;flex-direction:column}nav{gap:12px}.hero-grid,.two-col,.contact-grid{grid-template-columns:1fr}.hero{padding:55px 0}.cards{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.flow-item:nth-child(2):after{display:none}.team{grid-template-columns:repeat(2,1fr)}.cta{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){nav{gap:9px}nav a{font-size:.77rem}.roadmap{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.flow-item:after{display:none!important}.contact-form{grid-template-columns:1fr}.field.full,.form-note{grid-column:auto}.hero-card{padding:14px}.cta{padding:25px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="logo">SG</span><span>SwallowGuard <span style="color:#00aaa6">AI</span><small>MONITOR · UNDERSTAND · SUPPORT SAFER CARE</small></span></a>
+<nav aria-label="Main navigation"><a href="#home">Home</a><a href="#challenge">The Challenge</a><a href="#innovation">Innovation</a><a href="#prototype">Prototype</a><a href="#team">Our Team</a><a href="#collaborate">Collaborate</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+<div><span class="eyebrow">Student startup · Early prototype</span><h1>Smarter Swallow Monitoring.<br><span class="gradient">Aiming for Safer Care.</span></h1>
+<p class="lead">SwallowGuard AI is an early-stage student project exploring sensor technology and AI to study swallowing-related patterns and support future research into swallowing care.</p>
+<div class="actions"><a class="btn btn-primary" href="#innovation">Explore Our Innovation →</a><a class="btn btn-outline" href="#contact">Contact Our Team</a></div>
+<p style="font-size:.83rem;color:#a8c8de;margin-top:22px">A prototype concept under development — not a clinically validated medical device.</p></div>
+<div class="hero-card" aria-label="Illustrative sensor signal concept"><strong>Illustrative sensor signals</strong>
+<div class="signal"><b>Accelerometer · movement</b><div class="wave" data-wave="1"></div></div>
+<div class="signal"><b>Microphone · sound</b><div class="wave" data-wave="2"></div></div>
+<div class="signal"><b>Surface EMG · muscle activity</b><div class="wave" data-wave="3"></div></div>
+<p style="font-size:.78rem;color:#a8c8de;margin:12px 0 0">Decorative signal illustrations only; not real patient data or validated measurements.</p></div>
+</div></section>
+<section id="challenge"><div class="wrap two-col"><div class="section-head"><span class="kicker">The challenge</span><h2>Understanding swallowing difficulties</h2><p class="muted">Dysphagia can affect people living with conditions such as stroke and Parkinson’s disease. Swallowing difficulties may require professional assessment and appropriate care.</p><p class="muted">SwallowGuard AI explores whether sensor signals could help researchers study swallowing-related patterns. It is not intended to diagnose a condition or replace clinical evaluation.</p></div>
+<div class="cards"><article class="card"><div class="icon">🧠</div><h3>Neurological conditions</h3><p>Swallowing difficulties can occur alongside stroke, Parkinson’s and other conditions.</p></article><article class="card"><div class="icon">ⓘ</div><h3>Why monitoring matters</h3><p>Careful assessment can help healthcare professionals understand an individual’s needs.</p></article><article class="card"><div class="icon">🤝</div><h3>Research opportunity</h3><p>Explore responsible, non-invasive ways to study swallowing-related signals.</p></article></div>
+</div></section>
+<section class="pale" id="innovation"><div class="wrap two-col"><div><span class="kicker">Our innovation</span><h2>A multi-sensor prototype concept</h2><p class="muted">SwallowGuard AI is exploring the combination of accelerometer, microphone and surface electromyography (EMG) signals. These data streams may be studied with signal processing and AI methods to investigate swallowing-related patterns.</p><div class="notice"><strong>Current status:</strong> Early prototype development. Sensor suitability, signal quality, usability and performance still require systematic testing and expert guidance.</div></div>
+<div class="sensor-list"><div class="sensor"><div class="icon">〰️</div><div><h3>Accelerometer</h3><p class="muted">Explores movement and vibration patterns.</p></div></div><div class="sensor"><div class="icon">🎙️</div><div><h3>Microphone</h3><p class="muted">Explores sound features in controlled testing.</p></div></div><div class="sensor"><div class="icon">〽️</div><div><h3>Surface EMG</h3><p class="muted">Explores muscle-activity signals when appropriate equipment and expert supervision are available.</p></div></div></div>
+</div></section>
+<section id="workflow"><div class="wrap"><div class="section-head"><span class="kicker">Concept workflow</span><h2>From sensor signals to research insights</h2><p class="muted">A proposed workflow for development and evaluation, not a proven clinical pipeline.</p></div><div class="flow">
+<div class="flow-item"><div class="icon">〰</div><h3>01 · Sensor data</h3><p class="muted">Collect signals in controlled, consent-based prototype tests.</p></div><div class="flow-item"><div class="icon">⚙</div><h3>02 · Processing</h3><p class="muted">Inspect signal quality and explore useful features.</p></div><div class="flow-item"><div class="icon">◉</div><h3>03 · Pattern analysis</h3><p class="muted">Evaluate candidate patterns using appropriately labelled data.</p></div><div class="flow-item"><div class="icon">↗</div><h3>04 · Research insights</h3><p class="muted">Document findings, limitations and next experiments.</p></div>
+</div></div></section>
+<section class="pale" id="prototype"><div class="wrap"><div class="section-head"><span class="kicker">Prototype development</span><h2>Building carefully, validating step by step</h2><p class="muted">Our roadmap will evolve as the team learns from engineering tests, mentors and relevant domain experts.</p></div><div class="roadmap">
+<article class="phase current"><div class="phase-num">1</div><h3>Current · Prototype</h3><ul><li>Explore sensor setup</li><li>Check data collection and signal quality</li><li>Document early engineering tests</li><li>Review safety and feasibility with mentors</li></ul></article>
+<article class="phase"><div class="phase-num">2</div><h3>Next · Refinement</h3><ul><li>Improve prototype reliability</li><li>Develop reproducible signal-processing steps</li><li>Define a responsible testing protocol</li><li>Seek expert feedback and appropriate approvals</li></ul></article>
+<article class="phase"><div class="phase-num">3</div><h3>Future · Evaluation</h3><ul><li>Explore algorithm development if suitable data are available</li><li>Plan supervised validation with qualified partners</li><li>Assess privacy, usability and applicable requirements</li><li>Make no clinical claims before evidence supports them</li></ul></article>
+</div></div></section>
+<section id="team"><div class="wrap"><div class="section-head"><span class="kicker">Our team</span><h2>Students building with purpose</h2><p class="muted">Replace these placeholders with confirmed team members, roles and faculty guidance.</p></div><div class="team">
+<div class="person"><div class="avatar">👤</div><h3>Team Lead</h3><p class="muted">Project coordination</p></div><div class="person"><div class="avatar">💻</div><h3>Developer</h3><p class="muted">Software and data</p></div><div class="person"><div class="avatar">🔬</div><h3>Prototype Lead</h3><p class="muted">Sensors and testing</p></div><div class="person"><div class="avatar">🎓</div><h3>Faculty Mentor</h3><p class="muted">Guidance · add confirmed details</p></div>
+</div></div></section>
+<section class="pale" id="collaborate"><div class="wrap"><div class="cta"><div><span class="kicker" style="color:#48e5d5">Collaborate with us</span><h2>Help us learn, test and improve</h2><p>We welcome conversations with mentors, researchers, healthcare professionals, incubators and potential collaborators interested in responsible healthcare innovation.</p></div><a class="btn btn-primary" href="#contact">Start a conversation →</a></div></div></section>
+<section id="contact"><div class="wrap contact-grid"><div><span class="kicker">Contact</span><h2>Connect with SwallowGuard AI</h2><p class="muted">Use the form to draft a message to the team. Add your real team email address before publishing.</p><p class="muted">Interested in mentorship, research collaboration or startup incubation? Tell us a little about your interest.</p><div class="notice">Please do not submit patient-identifiable information, medical records or other sensitive health data through this website.</div></div>
+<form id="contactForm" class="contact-form"><div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required placeholder="Your name"></div><div class="field"><label for="org">Organization</label><input id="org" name="org" autocomplete="organization" placeholder="College / organization"></div><div class="field full"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div><div class="field full"><label for="message">Message *</label><textarea id="message" name="message" required placeholder="Tell us how you'd like to collaborate..."></textarea></div><div class="field full"><button class="btn btn-primary" type="submit">Prepare email →</button></div><p class="form-note">This demo form opens your default email application; it does not store or send information to a server.</p><p id="formStatus" class="form-note" aria-live="polite"></p></form>
+</div></section>
+</main>
+<footer><div class="wrap footer-row"><a class="brand" href="#home" style="color:white"><span class="logo">SG</span><span>SwallowGuard <span style="color:#23d9cd">AI</span><small style="color:#bfd4e4">MONITOR · UNDERSTAND · SUPPORT SAFER CARE</small></span></a><p class="footer-note">Student-led project and early-stage prototype. Not a clinically validated medical device, diagnostic tool or substitute for professional medical care.</p><span style="font-size:.8rem">© <span id="year"></span> SwallowGuard AI</span></div></footer>
+<script>
+document.querySelectorAll('[data-wave]').forEach((wave,idx)=>{let seed=idx+3;for(let i=0;i<44;i++){seed=(seed*9301+49297)%233280;let h=5+((seed/233280)*28);const bar=document.createElement('i');bar.style.setProperty('--h',h+'px');wave.appendChild(bar)}});
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject=encodeURIComponent('SwallowGuard AI website enquiry');const body=encodeURIComponent('Name: '+d.get('name')+'\nOrganization: '+(d.get('org')||'Not provided')+'\nEmail: '+d.get('email')+'\n\nMessage:\n'+d.get('message'));document.getElementById('formStatus').textContent='Your email draft is ready. Add the team email address in the mailto link in index.html before publishing.';window.location.href='mailto:?subject='+subject+'&body='+body;});
+</script>
+</body>
+</html>
