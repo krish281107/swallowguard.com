@@ -83,7 +83,7 @@ footer{background:#061b33;color:#dceaf6;padding:30px 0}.footer-row{display:flex;
 <script>
 document.querySelectorAll('[data-wave]').forEach((wave,idx)=>{let seed=idx+3;for(let i=0;i<44;i++){seed=(seed*9301+49297)%233280;let h=5+((seed/233280)*28);const bar=document.createElement('i');bar.style.setProperty('--h',h+'px');wave.appendChild(bar)}});
 document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject=encodeURIComponent('SwallowGuard AI website enquiry');const body=encodeURIComponent('Name: '+d.get('name')+'\nOrganization: '+(d.get('org')||'Not provided')+'\nEmail: '+d.get('email')+'\n\nMessage:\n'+d.get('message'));document.getElementById('formStatus').textContent='Your email draft is ready. Add the team email address in the mailto link in index.html before publishing.';window.location.href='mailto:bosebala@gmail.com?subject='+subject+'&body='+body;});
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject=encodeURIComponent('SwallowGuard AI website enquiry');const body=encodeURIComponent('Name: '+d.get('name')+'\nOrganization: '+(d.get('org')||'Not provided')+'\nEmail: '+d.get('email')+'\n\nMessage:\n'+d.get('message'));document.getElementById('formStatus').textContent='Your email draft is ready. Add the team email address in the mailto link in index.html before publishing.';window.location.href='mailto:krish28291112@gmail.com?subject='+subject+'&body='+body;});
 </script>
 </body>
 </html>
